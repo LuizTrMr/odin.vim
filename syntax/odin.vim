@@ -75,7 +75,7 @@ syntax region odinChar start=+'+ skip=+\\\\\|\\'+ end=+'+
 syntax region odinString start=+"+ skip=+\\\\\|\\'+ end=+"+ contains=odinEscape
 syntax match odinEscape display contained /\\\([nrt\\'"]\|x\x\{2}\)/
 
-syntax match odinImplicitEnum "\.\@<=\%([a-zA-Z0-9_]*\)" display
+syntax match odinImplicitEnum "\%(\W\.\)\@<=\%([a-zA-Z0-9_]*\)" display
 syntax match odinFunctionDecl "\v<\w*>(\s*::\s*proc)@="
 syntax match odinFunctionCall "\v\w+\s*(\()@="
 
