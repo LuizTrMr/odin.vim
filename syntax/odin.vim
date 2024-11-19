@@ -50,6 +50,7 @@ syntax match odinFixMe "FIXME"
 syntax match odinNoCheckin "NOCHECKIN"
 syntax match odinHack "HACK"
 syntax match odinDebug "DEBUG"
+syntax match odinDesign "DESIGN"
 
 syntax keyword odinDataType string cstring bool b8 b16 b32 b64 rune any rawptr f16 f32 f64 f16le f16be f32le f32be f64le f64be u8 u16 u32 u64 u128 u16le u32le u64le u128le u16be u32be u64be u128be uint uintptr i8 i16 i32 i64 i128 i16le i32le i64le i128le i16be i32be i64be i128be int complex complex32 complex64 complex128 quaternion quaternion64 quaternion128 quaternion256 matrix typeid
 syntax keyword odinBool true false
@@ -104,8 +105,8 @@ syntax match odinMacro "#\<\w\+\>" display
 syntax match odinTemplate "$\<\w\+\>"
 
 syntax match odinCommentNote "@\<\w\+\>" contained display
-syntax region odinLineComment start=/\/\// end=/$/  contains=odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack, odinDebug
-syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack, odinDebug
+syntax region odinLineComment start=/\/\// end=/$/  contains=odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack, odinDebug, odinDesign
+syntax region odinBlockComment start=/\v\/\*/ end=/\v\*\// contains=odinBlockComment, odinCommentNote, odinTodo, odinNote, odinXXX, odinFixMe, odinNoCheckin, odinHack, odinDebug, odinDesign
 
 highlight link odinAsm Keyword
 highlight link odinContext Keyword
@@ -192,6 +193,7 @@ highlight link odinFixMe Todo
 highlight link odinNoCheckin Todo
 highlight link odinHack Todo
 highlight link odinDebug Todo
+highlight link odinDesign Todo
 
 highlight link odinTemplate Constant
 
